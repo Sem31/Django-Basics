@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <h1> Hey user </h1>
+        <div>  
+            {% if AccessRecord %}
+                <table>
+                    <tr>
+                        <th> Name </th>
+                        <th> Email </th>
+                    </tr>
+                {% for Acc in AccessRecord %}
+                    <tr>
+                        <td> {{ Acc.Name }} </td>
+                        <td> {{ Acc.Email }} </td>
+                    </tr>
+                   {% endfor %}
+                </table>
+            {% endif %}
+        </div>
+    </body>
+</html>

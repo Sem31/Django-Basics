@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <h1>Dynamic data from the models </h1>
+
+        <div class= "django1">
+            {% if AccessRecords %}
+            <table>
+                <thead>
+                    <th>Name </th>
+                    <th>Date </th>
+                </thead>
+                {% for acc in AccessRecords %}
+                <tr>
+                    <td>{{ acc.Name }}</td>
+                    <td>{{ acc.date }}</td>
+                <tr>
+                {% endfor %}
+            </table>
+            {% else %}
+                <p> No access recordes </p>
+            {% endif %}
+        </div>
+    </body>
+</html>
