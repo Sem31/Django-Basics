@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Form</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    </head>
+    <body>
+        <h1>Welcome to Form page </h1>
+        <div class = "container">
+            <form method = 'POST'>
+                {{ form.as_p }}
+                {% csrf_token %}
+                <input type="Submit" class ="btn btn-primary" value = 'Submit'>
+            </form>
+        </div>
+    </body>
+</html
