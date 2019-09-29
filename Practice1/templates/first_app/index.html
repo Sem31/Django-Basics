@@ -1,0 +1,16 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" type="text/css" href= {% static "css/style.css" %}>
+    </head>
+    <body>
+        <h1>Hello sem </h1>
+         {% for acc in data %}
+                <tr>
+                    <td>{{ acc.name }}</td>
+                    <td>{{ acc.date }}</td>
+                </tr>
+        {% endfor %}
+    </body>
+</html>
